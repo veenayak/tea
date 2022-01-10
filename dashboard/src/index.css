@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+p{
+  line-height: 1.6;
+}
+.wrapper{
+  margin: auto;
+  padding: 12px 18px;
+}
+.alert{
+  position: fixed;
+  width: auto;
+  background: #423da1;
+  left: 18px;
+  bottom: -50px;
+  border-radius: 4px;
+  padding: 12px 18px;
+  color: #ffffff;
+  transition: all 0.2s;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  align-items: center;
+  z-index: 99999;
+}
+.alert.show{
+  bottom: 18px;
+  opacity: 1;
+}
+.alert p{
+  margin: 0;
+  font-size: 14px;
+}
+input,textarea,select{
+  padding: 12px 18px;
+  border-radius: 4px;
+  border: 0;
+  background: #fff;
+  outline: 0;
+  border: 2px solid black;
+}
+input:focus,textarea:focus{
+  box-shadow: 0px 0px 4px 0px #423da1;
+  border: 2px solid #49469e;
+}
+button{
+  padding: 14px 18px;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  background: rgb(66, 61, 161);
+  color: #ffffff;
+  letter-spacing: 0.4px;
+  transition: all 0.2s;
+  cursor: pointer;
+  max-width: max-content;
+}
+button:hover{
+  background: #333071;
+}
+label{
+  padding: 12px 18px;
+  padding-left: 0;
+  align-self: center;
+}
+.notLogin{
+  display: grid;
+  grid-template-areas: "topRight" "bottomRight";
+  grid-template-rows: max-content auto;
+  grid-template-columns: auto;
+  min-height: 100vh;
+}
+.sidebar {
+  grid-area: left;  
+  box-shadow: 0px 0px 8px 4px #cccccc;
+  z-index: 0;
+}
+.sidebar.close{
+  display: none;
+}
+.notLog.open {
+  display: grid;
+  grid-template-areas: "left topRight" "left bottomRight";
+  grid-template-columns: 160px auto;
+  grid-template-rows: max-content auto;
+}
+@media only screen and (max-width: 768px) {
+  .ham{
+    display: inline-block;
+  }
+
+
+}
+@media only screen and (min-width: 769px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    transition: all 0.5s;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f4f2f2; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #423da1; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333071; 
+  }
+}
